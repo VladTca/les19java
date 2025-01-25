@@ -10,7 +10,6 @@ public class PetList {
         count = 0;
     }
 
-
     public void add(Pet pet) {
         if (count == pets.length) {
             resize();
@@ -35,7 +34,7 @@ public class PetList {
         boolean isDeleted = false;
 
         for (int i = 0; i < count; i++) {
-            if (pets[i].getName().equals(name)) {
+            if (pets[i].getName().equalsIgnoreCase(name)) {
                 pets[i] = pets[count - 1];
                 count--;
                 System.out.println();
@@ -55,7 +54,7 @@ public class PetList {
     public Optional<List<Pet>> findPetsByName(String name) {
         List<Pet> foundPets = new ArrayList<>();
         for (int i = 0; i < count; i++) {
-            if (pets[i].getName().equals(name)) {
+            if (pets[i].getName().equalsIgnoreCase(name)) {
                 foundPets.add(pets[i]);
             }
         }
