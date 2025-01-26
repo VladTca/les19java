@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
+       new Gui();
         Scanner sc = new Scanner(System.in);
         PetList petList = new PetList();
         petList.startPets();
